@@ -33,14 +33,6 @@ class SoundNovaHomePage extends StatefulWidget {
 }
 
 class _SoundNovaHomePageState extends State<SoundNovaHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
