@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import "package:fluttertoast/fluttertoast.dart";
 
 TextStyle _textStyle = const TextStyle(color: Colors.white);
 
@@ -22,10 +21,7 @@ Drawer appbar(String appTitle) {
                 onTap: () {},
               ),
               const Divider(),
-              _menuItem('Playlists', () {
-                Fluttertoast.showToast(
-                    msg: "Test toast", backgroundColor: Colors.white);
-              }),
+              _menuItem('Playlists', () {}),
               _menuItem('Cast', () {}),
               _menuItem('About', () {}),
             ],
