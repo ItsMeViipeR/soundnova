@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:soundnova/pages/about.dart';
+
+import 'main.dart';
 
 TextStyle _textStyle = const TextStyle(color: Colors.white);
 
@@ -9,7 +12,7 @@ Widget _menuItem(String title, void Function()? onTap) {
   );
 }
 
-Drawer appbar(String appTitle) {
+Drawer sidebar(String appTitle) {
   return Drawer(
       backgroundColor: Colors.blueGrey,
       child: SizedBox(
@@ -21,9 +24,14 @@ Drawer appbar(String appTitle) {
                 onTap: () {},
               ),
               const Divider(),
+              _menuItem('Home', () {
+                runApp(const SoundNova());
+              }),
               _menuItem('Playlists', () {}),
               _menuItem('Cast', () {}),
-              _menuItem('About', () {}),
+              _menuItem('About', () {
+                runApp(const SoundNovaAbout());
+              }),
             ])),
       ));
 }

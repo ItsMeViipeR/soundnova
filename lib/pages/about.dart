@@ -1,18 +1,14 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 import 'package:soundnova/sidebar.dart';
-import 'package:soundnova/constants.dart' as constants;
+import "package:soundnova/constants.dart" as constants;
 
-void main() {
-  runApp(const SoundNova());
-}
-
-class SoundNova extends StatelessWidget {
-  const SoundNova({super.key});
+class SoundNovaAbout extends StatelessWidget {
+  const SoundNovaAbout({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: constants.appName,
+      title: "SoundNova | About",
       theme: ThemeData(
         textTheme: const TextTheme(
           bodyLarge: TextStyle(color: Colors.white),
@@ -20,19 +16,19 @@ class SoundNova extends StatelessWidget {
           bodySmall: TextStyle(color: Colors.white),
         ),
       ),
-      home: const SoundNovaHomePage(),
+      home: const SoundNovaAboutPage(),
     );
   }
 }
 
-class SoundNovaHomePage extends StatefulWidget {
-  const SoundNovaHomePage({super.key});
+class SoundNovaAboutPage extends StatefulWidget {
+  const SoundNovaAboutPage({super.key});
 
   @override
-  State<SoundNovaHomePage> createState() => _SoundNovaHomePageState();
+  State<SoundNovaAboutPage> createState() => _SoundNovaAboutPageState();
 }
 
-class _SoundNovaHomePageState extends State<SoundNovaHomePage> {
+class _SoundNovaAboutPageState extends State<SoundNovaAboutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,10 +38,7 @@ class _SoundNovaHomePageState extends State<SoundNovaHomePage> {
         foregroundColor: Colors.white,
       ),
       drawer: sidebar(constants.appName),
-      body: const Padding(
-        padding: EdgeInsets.all(35),
-        child: Center(),
-      ),
+      body: const Center(child: Center()),
       backgroundColor: const Color.fromARGB(255, 40, 40, 40),
     );
   }
